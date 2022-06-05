@@ -1,0 +1,165 @@
+
+ body
+ {
+	 display:flex;
+	 justify-content:center;
+	 align-items:center;
+	 min-height:100vh;
+ }
+ body::before
+ {
+	 content:'';
+	 position:absolute;
+	 top:0;
+	 left:0;
+	 width:100%;
+	 height:100%;
+	 background:linear-gradient(45deg,#ffe602,#85ffeb,#21ebfa 50%,
+	#fc15e8,#85ffeb);
+ }
+ body::after
+ {
+	 content:'';
+	 position:absolute;
+	 top:-30px;
+	 left:0;
+	 width:100%;
+	 height:100%;
+	 background:linear-gradient(155deg,#f40390,#f40390 50%,
+	 #03d0f4,transparent 50%,transparent);
+	 animation:animate 5s ease-in-out infinite;
+ }
+ @keyframes animate
+ {
+	 0%,100%
+	 {
+		 transform:translateY(10px);
+	 }
+	 50%
+	 {
+		 transform:translateY(-10px);
+	 }
+ }
+.cont
+{
+	position:relative;
+}
+.cont::before
+{
+	content:'';
+	position:absolute;
+	bottom:-150px;
+	width:150%;
+	height:60px;
+	border-radius:50%;
+}
+.blen
+{
+	position:relative;
+	z-index:5;
+	width:350px;
+	height:350px;
+	border-radius:60%;
+	border:2px solid rgba(166,167,166,0.699);
+	animation:animate 4s ease-in-out infinite;
+	animation-delay: -2s;
+}
+.clockface
+{
+	position:absolute;
+	top:5px;
+	left:5px;
+	right:5px;
+	bottom:5px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	background: radial-gradient(transparent,rgba(
+		255,255,255,0.1)),url(clockface.png);
+	background-size:cover;
+	border-radius:90%;
+	border:1px solid rgba(288,124,124,0.5);
+	border-bottom:none;
+	border-right:none;
+	box-shadow:-10px -10px 20px rgba(255,255,255,0.1),
+	10px 10px 20px rgba(0,0,0,0.1),
+	0px 40px 50px(0,0,0,0.2);
+}
+.clockface::before
+{
+	content:'';
+	position:absolute;
+	width:25px;
+	height:25px;
+	background:#fff;
+	border-radius:90%;
+	z-index:10000;
+	
+}
+.hour, .min, .sec
+{
+	position:absolute;
+}
+.hour, .h
+{
+	width:160px;
+	height:160px;
+}
+.min, .m
+{
+	width:190px;
+	height:190px;
+}
+ .sec, .s
+ {
+	 width:-200px;
+	 height:-100px;
+}
+.h , .m , .s
+{
+	display:flex;
+	justify-content:center;
+	position:absolute;
+	border-radius:50%;
+}
+.h::before
+{
+	content:'';
+	position:absolute;
+	width:8px;
+	height:80px;
+	background:#0012f4;
+	z-index:11;
+	border-radius:6px;
+}
+.m::before
+{
+	content:'';
+	position:absolute;
+	width:5px;
+	height:90px;
+	background:#fff;
+	z-index:12;
+	border-radius:6px;
+}
+.s::before
+{
+	content:'';
+	position:absolute;
+	width:2px;
+	height:120px;
+	background:#fff;
+	z-index:12;
+	border-radius:6px;
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

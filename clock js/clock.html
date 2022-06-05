@@ -1,0 +1,61 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Java script clock</title>
+
+<link rel="stylesheet" href="sty.css">
+</head>
+<body>
+	<div class="cont">
+		<div class="blen">
+			<div class="clockface">
+			
+			<div class="hour">
+			<div class="h" id="h"></div>
+			</div>
+			
+			<div class="min">
+			<div class="m" id="m"></div>
+			</div>
+			
+			<div class="sec`">
+			<div class="s" id="s"></div>
+			</div>
+	</div>
+	</div>
+	</div>
+	</div>
+
+<script>
+const deg=6;
+const h=document.querySelector("#h");
+const m=document.querySelector("#m");
+const s=document.querySelector("#s");
+
+setInterval(()=>
+{
+let day	=new Date();
+let hh	=day.getHours()*30;
+let mm	=day.getMinutes()*deg;
+let ss	=day.getSeconds()*deg;
+
+h.style.transform= `rotateZ(${hh+(mm/12)}deg)`;
+m.style.transform= `rotateZ(${(mm)}deg)`;
+s.style.transform= `rotateZ(${(ss)}deg)`;
+})
+
+</script>
+
+
+
+</script>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
